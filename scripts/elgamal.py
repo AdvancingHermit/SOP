@@ -5,9 +5,9 @@ from time import perf_counter_ns
 
 def keyMaking(m, prevM):
     p = sympy.randprime(prevM,m)
-    g = sympy.randprime(int(p/2), p)
-    k_pr = random.randint(int(p/2),p)
-    i = random.randint(int(p/2),p)
+    g = sympy.randprime(int(p//2), p)
+    k_pr = random.randint(int(p//2),p)
+    i = random.randint(int(p//2),p)
     
     k_E = pow(g,i,p)
     
@@ -17,7 +17,7 @@ def keyMaking(m, prevM):
 
 
 if __name__ == "__main__":
-    for n in range(2049):
+    for n in range(1024):
         
             m = int(pow(2, n))
             
@@ -41,4 +41,3 @@ if __name__ == "__main__":
                 
             if n >= 1:
                 prevM = int(m)
-                

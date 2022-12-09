@@ -15,9 +15,12 @@ def keyMaking(p, k_pr, g, div):
 
 
 if __name__ == "__main__":
-    for n in range(2049):
-        
+        for x in range(3):
+    
+            n = 15360
             m = int(pow(2, n))
+            prevM = int(pow(2,n-1))
+            
             
             if n >= 3:
                 p = sympy.randprime(prevM,m)
@@ -31,15 +34,12 @@ if __name__ == "__main__":
                 
                 end = perf_counter_ns()
                 
-                file1 = open("optimeretTime.txt","a")
+                file1 = open("certainTime.txt","a")
                 file1.write(format(end-start) + "\n")
                 print(end - start)
                 file1.close()
+
+
                 
-                file2 = open("optimeretPrimes.txt", "a")
-                file2.write(format(p) + "\n")
-                print()
-                file2.close()
-                
-            if n >= 1:
-                prevM = int(m)
+            
+                S
